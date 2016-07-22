@@ -6,7 +6,6 @@
 	<artifactId>spring-boot-test</artifactId>
 	<packaging>jar</packaging>
 
-
 	<!-- 继承自默认的 Spring Boot -->
 	<parent>
 		<groupId>com.small</groupId>
