@@ -1,0 +1,17 @@
+/target/
+logs.*
+
+# Build output directies
+/target
+*/target
+/build
+*/build
+/bin
+*/bin
+#
+
+# Eclipse specific files/directories
+.classpath
+.project
+.settings
+.metadata
