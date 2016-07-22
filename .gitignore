@@ -14,4 +14,7 @@ logs.*
 .classpath
 .project
 .settings
+*/.classpath
+*/.project
+*/.settings
 .metadata
