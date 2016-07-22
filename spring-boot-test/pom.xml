@@ -16,7 +16,6 @@
 	<!-- 打包成可执行的 JAR -->
 	<build>
 		<finalName>spring-boot-test</finalName>  
-	 
 		<sourceDirectory>src/main/java</sourceDirectory>
 		<testSourceDirectory>src/test/java</testSourceDirectory>
 		
