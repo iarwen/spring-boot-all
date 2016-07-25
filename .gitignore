@@ -11,10 +11,4 @@ logs.*
 #
 
 # Eclipse specific files/directories
-.classpath
-.project
-.settings
-*/.classpath
-*/.project
-*/.settings
 .metadata
