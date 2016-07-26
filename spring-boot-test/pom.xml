@@ -13,6 +13,14 @@
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 	
+	<dependencies>
+		<dependency>
+			<groupId>com.small</groupId>
+			<artifactId>spring-boot-framework</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+	</dependencies>
+	
 	<!-- 打包成可执行的 JAR -->
 	<build>
 		<finalName>spring-boot-test</finalName>  

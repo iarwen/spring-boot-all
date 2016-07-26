@@ -12,7 +12,7 @@
   <logger name="com.small" level="debug" />
   
   <!-- Setting the root level of logging to DEBUG -->
-  <root level="warn">
+  <root level="INFO">
     <appender-ref ref="STDOUT" />
   </root>
  
