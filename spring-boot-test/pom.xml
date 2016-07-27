@@ -15,6 +15,17 @@
 	
 	<dependencies>
 		<dependency>
+			<groupId>org.apache.tomcat.embed</groupId>
+			<artifactId>tomcat-embed-jasper</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+		</dependency>
+	
+	
+		<dependency>
 			<groupId>com.small</groupId>
 			<artifactId>spring-boot-framework</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
@@ -33,6 +44,14 @@
                 <directory>src/main/resources</directory>  
                 <targetPath>${project.build.directory}/classes</targetPath>  
             </resource>  
+            <resource>
+	                <directory>src/main/webapp</directory>
+                    <!--注意此次必须要放在此目录下才能被访问到-->
+	                <targetPath>META-INF/resources/webjars</targetPath> 
+	                <includes>
+	                    <include>**/**</include>
+	                </includes>
+	            </resource>
         </resources> 
         
 		<plugins>

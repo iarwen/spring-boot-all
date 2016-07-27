@@ -1,5 +1,7 @@
 package com.small.sbtest.system.service.impl;
 
+import javax.annotation.PostConstruct;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
@@ -32,8 +34,13 @@ public class UserServiceImpl extends AbstractCoreBaseService<UserInfo> implement
 		// check
 		UserInfo ui = findByFieldSingle(ctx, "email", object.getEmail());
 		if (ui != null) {
-			throw new BizException("已经存在Email 为" + ui.getName() + "的用户");
+			throw new BizException("已经存在Email为" + ui.getEmail() + "的用户");
 		}
 		super.save(ctx, object);
+	}
+
+	@PostConstruct
+	public void init() {
+		System.out.println("");
 	}
 }

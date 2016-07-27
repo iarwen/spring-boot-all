@@ -1,4 +1,4 @@
-package com.small.bdp.framework.controller;
+package com.small.sbtest.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,10 +12,9 @@ import com.small.bdp.framework.dto.ResultDto;
 public class FrameworkController {
 
 	@RequestMapping(value = "/", method = { RequestMethod.GET, RequestMethod.POST })
-	public ModelAndView index() {
-		ModelAndView mv = new ModelAndView("index");
+	public String index() {
 
-		return mv;
+		return "index.jsp";
 	}
 
 	@RequestMapping(value = "/login", method = { RequestMethod.GET, RequestMethod.POST })
@@ -27,7 +26,7 @@ public class FrameworkController {
 
 	@RequestMapping(value = "/main", method = { RequestMethod.GET, RequestMethod.POST })
 	public ModelAndView main() {
-		ModelAndView mv = new ModelAndView("main");
+		ModelAndView mv = new ModelAndView("hello.jsp");
 
 		return mv;
 	}

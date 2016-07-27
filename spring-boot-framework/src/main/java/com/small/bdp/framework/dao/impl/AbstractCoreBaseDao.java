@@ -18,7 +18,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.web.context.WebApplicationContext;
 
 import com.small.bdp.core.context.IContext;
 import com.small.bdp.core.query.CompareType;
@@ -56,9 +55,6 @@ public abstract class AbstractCoreBaseDao<T extends AbstractCoreBaseInfo> implem
 	// 配置实现的EntityManager实例
 	@PersistenceContext
 	private EntityManager em = null;
-
-	@Autowired
-	private WebApplicationContext webApplicationContext;
 
 	/**
 	 * 获取EntityManager模板
@@ -150,7 +146,8 @@ public abstract class AbstractCoreBaseDao<T extends AbstractCoreBaseInfo> implem
 				object.setFid(UUID.randomUUID().toString());
 			}
 			em.persist(object);
-			if (count % 100 == 0) {
+			// 刷入库 防止OOM
+			if (count % 500 == 0) {
 				em.flush();
 				em.clear();
 			}

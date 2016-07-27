@@ -16,6 +16,8 @@ public class ResultDto {
 
 	private Object userObject;
 
+	private long timestamp = System.currentTimeMillis();
+
 	public ResultDto() {
 	}
 
@@ -58,6 +60,14 @@ public class ResultDto {
 
 	public void setErrorCode(int errorCode) {
 		this.errorCode = errorCode;
+	}
+
+	public long getTimestamp() {
+		return timestamp;
+	}
+
+	public void setTimestamp(long timestamp) {
+		this.timestamp = timestamp;
 	}
 
 }
