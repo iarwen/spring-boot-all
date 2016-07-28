@@ -47,7 +47,7 @@ public abstract class BeanGenSqlUtils {
 		}
 
 		String sqlStr2 = subfield(beanClass, dbtype);
-		Class c = beanClass.getSuperclass();
+		Class<?> c = beanClass.getSuperclass();
 		while (c != null) {
 			sqlStr2 += subfield(c, dbtype);
 			c = c.getSuperclass();
@@ -62,7 +62,7 @@ public abstract class BeanGenSqlUtils {
 		return sql;
 	}
 
-	private static String subfield(Class c, DBType dbtype) {
+	private static String subfield(Class<?> c, DBType dbtype) {
 		Field[] fields = c.getDeclaredFields();
 		String sqlFormat = "\"{0}\" {1}";
 		if (dbtype == DBType.MySQL) {
@@ -96,11 +96,11 @@ public abstract class BeanGenSqlUtils {
 		return sqlStr2;
 	}
 
-	private static String sqltype(Class c, DBType dbtype) {
+	private static String sqltype(Class<?> c, DBType dbtype) {
 		return sqltype(c, dbtype, 255);
 	}
 
-	private static String sqltype(Class c, DBType dbtype, int length) {
+	private static String sqltype(Class<?> c, DBType dbtype, int length) {
 
 		if (dbtype == DBType.SQLIte3) {
 			if (c.equals(String.class)) {
@@ -134,23 +134,10 @@ public abstract class BeanGenSqlUtils {
 		return "";
 	}
 
+	@SuppressWarnings("rawtypes")
 	public static List<Class> getEntityClassList() {
 		List<Class> classList = new ArrayList<Class>();
 		return classList;
 	}
 
-	public static void main(String[] args) {
-
-		// TestInfo obj = new TestInfo();
-		//
-		// String sql = genCreateTableSql(obj.getClass(), DBType.SQLIte3);
-		//
-		// System.out.println(sql);
-
-		List<Class> list = getEntityClassList();
-		for (Class c : list) {
-			System.out.println(c.getName());
-		}
-
-	}
 }

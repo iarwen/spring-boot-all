@@ -24,7 +24,7 @@ import org.springframework.util.StringUtils;
 /**
  * excel 工具类
  */
-@SuppressWarnings({ "unchecked", "deprecation" })
+@SuppressWarnings({ "unchecked", "deprecation", "rawtypes" })
 public class ExportUtils<T> {
 	private static ExportUtils excelUtils = null;
 
@@ -251,8 +251,6 @@ public class ExportUtils<T> {
 				case THREE: {
 					HSSFCell cell = row.createCell(index++);
 					cell.setCellStyle(style);
-
-					String mn = "get" + StringUtils.capitalize(field.getAnnotation(Export.class).name());
 					for (int i = 0; i < fields.length; i++) {
 						if (field.getAnnotation(Export.class).name().equals(fields[i].getName())) {
 							field = fields[i];

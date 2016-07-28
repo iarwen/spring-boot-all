@@ -1,7 +1,6 @@
 package com.small.bdp.core.json;
 
 import java.io.IOException;
-import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import org.springframework.stereotype.Component;

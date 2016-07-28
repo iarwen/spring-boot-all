@@ -15,6 +15,7 @@ import org.springframework.cglib.beans.BeanCopier;
 
 import com.small.bdp.framework.exception.BaseException;
 
+@SuppressWarnings({ "unchecked", "rawtypes" })
 public class DtoUtils {
 
 	/**
