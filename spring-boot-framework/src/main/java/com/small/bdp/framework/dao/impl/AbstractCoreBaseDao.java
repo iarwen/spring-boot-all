@@ -52,6 +52,9 @@ public abstract class AbstractCoreBaseDao<T extends AbstractCoreBaseInfo> implem
 	@Autowired
 	private JdbcTemplate jdbcTemplate = null;
 
+	protected JdbcTemplate getJdbcTemplate() {
+		return jdbcTemplate;
+	}
 	// 配置实现的EntityManager实例
 	@PersistenceContext
 	private EntityManager em = null;
