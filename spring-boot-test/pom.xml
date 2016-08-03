@@ -47,7 +47,7 @@
             <resource>
 	                <directory>src/main/webapp</directory>
                     <!--注意此次必须要放在此目录下才能被访问到-->
-	                <targetPath>META-INF/resources/webjars</targetPath> 
+	                <targetPath>/static</targetPath> 
 	                <includes>
 	                    <include>**/**</include>
 	                </includes>

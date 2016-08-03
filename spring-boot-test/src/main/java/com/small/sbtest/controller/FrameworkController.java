@@ -1,5 +1,10 @@
 package com.small.sbtest.controller;
 
+import java.util.Date;
+import java.util.Map;
+
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -12,9 +17,9 @@ import com.small.bdp.framework.dto.ResultDto;
 public class FrameworkController {
 
 	@RequestMapping(value = "/", method = { RequestMethod.GET, RequestMethod.POST })
-	public String index() {
-
-		return "index.jsp";
+	public String index(HttpServletRequest req, Map<String, Object> model) {
+		model.put("time", new Date());
+		return "index";
 	}
 
 	@RequestMapping(value = "/login", method = { RequestMethod.GET, RequestMethod.POST })

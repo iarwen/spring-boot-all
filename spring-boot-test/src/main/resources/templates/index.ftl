@@ -1,7 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=utf-8"  
-    pageEncoding="utf-8"%>  
-<!DOCTYPE html>  
-<%@ taglib prefix="c" uri="http://java.sun.com/jstl/core"%>  
+<!DOCTYPE html>
 <html lang="zh-cn">  
 <head>  
 <meta charset="utf-8">  
@@ -14,7 +11,10 @@
 </head>  
 <!-- CSS件 -->  
 <link rel="stylesheet" href="/res/bootstrap/css/bootstrap.min.css">  
-<body>  
+<body>
+	Date: ${time?date}
+	<br>
+	Time: ${time?time}
     <div class="container">  
         <form class="form-signin">  
             <h2 class="form-signin-heading">Please sign in</h2>  
