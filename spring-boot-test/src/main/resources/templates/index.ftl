@@ -15,6 +15,18 @@
 	Date: ${time?date}
 	<br>
 	Time: ${time?time}
+	<br>
+	Count: ${users?size}
+	<br>
+	<table width="50%"border="1"cellpadding="2"cellspacing="0">
+		<#list users as user>
+		    <tr>
+		        <td>${user.fid}</td>
+		        <td>${user.name}</td>
+		        <td>${user.email}</td>
+		    </tr>
+		</#list>
+	</table>
     <div class="container">  
         <form class="form-signin">  
             <h2 class="form-signin-heading">Please sign in</h2>  

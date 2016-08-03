@@ -41,7 +41,7 @@ public class UserController {
 
 	@RequestMapping(path = "/index", method = { RequestMethod.GET })
 	public String index(HttpServletRequest request) {
-		return "hello.html";
+		return "hello";
 	}
 
 	@RequestMapping(path = "/save", method = { RequestMethod.POST })
