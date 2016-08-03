@@ -1,5 +1,6 @@
 @echo off
 title 我的app
+cd /D C:\Users\Administrator\Desktop\server
 set WORKDIR="%cd%"
 echo 当前工作目录%WORKDIR%
 cd /D F:\workspace_icar_server\spring-boot-root\spring-boot-test
