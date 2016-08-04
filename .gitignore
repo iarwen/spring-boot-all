@@ -12,6 +12,9 @@ logs.*
 
 # Eclipse specific files/directories
 .metadata
+.project
 
 .idea/
 *.iml
+
+1
