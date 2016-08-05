@@ -75,7 +75,7 @@ public class AppTest {
 	public void insertbatch() throws Exception {
 		List<UserInfo> usr = new ArrayList<UserInfo>();
 		String email = UUID.randomUUID().toString().toLowerCase().replaceAll("-", "");
-		for (int i = 0; i < 10000; i++) {
+		for (int i = 0; i < 1000; i++) {
 			UserInfo u = new UserInfo();
 			String pre = email.concat("-").concat(i + "");
 			u.setEmail(pre.concat("@126.com"));
