@@ -29,7 +29,7 @@ public class FrameworkController {
 	public String index(HttpServletRequest req, Map<String, Object> model) {
 		IContext ctx = Context.createDefaultContext();
 		model.put("time", new Date());
-		model.put("users", userService.findAllWithPaging(ctx, 10, 2000));
+		model.put("users", userService.findAllWithPaging(ctx, 10, 200));
 		return "index";
 	}
 
