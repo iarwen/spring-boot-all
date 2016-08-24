@@ -13,15 +13,16 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 public class ApplicationMain {
 	private static Logger logger = LoggerFactory.getLogger(ApplicationMain.class);
 
-	private static String name;
+	private static String desc;
 
 	public static void main(String[] args) {
 		SpringApplication.run(ApplicationMain.class, args);
-		logger.debug(name + " started success");
+		logger.debug(desc + " started success");
 	}
 
-	public static void setName(String name) {
-		ApplicationMain.name = name;
+	@SuppressWarnings("unused")
+	public static void setDesc(String desc) {
+		ApplicationMain.desc = desc;
 	}
 
 }
